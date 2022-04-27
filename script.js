@@ -6,10 +6,10 @@ const mealDetails = document.querySelector('.meal-details')
 //console.log(searchBtn,mealList,closeBtn,mealDetails)
 
 searchBtn.addEventListener('click', getMeallist)
-// mealList.addEventListener('click', () => {
-//     mealDetails.classList.add("showRecipe")
-//     getMealDetails();
-// })
+mealList.addEventListener('click', () => {
+    mealDetails.classList.add("showRecipe")
+    getMealDetails();
+})
 
 function clicking() {
     console.log("dfgs");
@@ -74,14 +74,16 @@ function getMealDetails() {
                 //mealList.innerHTML = html;
                 //<iframe src="demo_iframe.htm" height="200" width="300" title="Iframe Example"></iframe>
 
-                html += ` <div class="meal-details-content">
+                html += ` 
+
+                <div class="meal-details-content">
                             <h2 class="recipe-title">&=${label}</h2>
                             <p class="recipe-category">${category}</p>
                             <div class="recipe-instruct">
                                 <h3>Instructions:</h3>
 
                                 <div class="iframe">
-                                    <iframe src="${url}" height="200" width="300" title="Iframe Example"></iframe>
+                                    <iframe src="${url}" height="400" width="500" title="Iframe Example"></iframe>
                                 </div>
 
                             </div>
